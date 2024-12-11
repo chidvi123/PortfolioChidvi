@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    background-image: url(image/loginpagebackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    width:100%;
+}
+
+label {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 30px;
+    
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6), -2px -2px 3px rgba(0, 0, 0, 0.5);
+    white-space:nowrap;
+}
+
+label span {
+    position:relative;
+    opacity: 0; 
+    display: inline-block; 
+    animation: fadeIn 6s infinite; 
+}
+
+
+@keyframes fadeIn {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+label span:nth-child(1) {
+    animation-delay: 0s;
+}
+label span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+label span:nth-child(3) {
+    animation-delay: 1s;
+}
+label span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+label span:nth-child(5) {
+    animation-delay: 2s;
+}
+label span:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+
+
+#container {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    
+}
+
+#container > a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+    border-radius: 25px;
+}
+
+#container > a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+img {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    border-radius: 150px;
+}
+
+#para1, #para2, #para3 {
+    position: relative;
+    top: 300px;
+    left: 400px;
+}
+
+#para1, #para2 {
+    font-size: 40px;
+}
+
+#para1 span, #para2 span {
+    color:white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width:500px;
+    box-sizing: border-box;
+
+}
+
+#para3 {
+    font-size: 15px;
+    color:rgb(220, 229, 226);
+    width:100%;
+    line-height:1.8em;
+    margin:0;
+    padding:0;
+}
+#video
+{
+    position:absolute;
+    top:1500px;
+    left:600px;
+}
+
+.social-links
+{
+    display:flex;
+    flex-wrap:nowrap;
+}
+.social-links a{
+    position:relative;
+    top:325px;
+    left:400px;
+    font-size:30px;
+    color:black;
+    padding:10px 20px;
+    cursor:pointer;
+    transition: color 0.25s;
+
+
+}
+
+.social-links a:hover{
+    color:azure;
+    
+}
+
+#para2 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    
+}
+
+
+#para2 span {
+    position:absolute;
+    color:black;
+    
+    padding: 1px 15px;
+    text-shadow: 1.5px 1.5px 2px rgb(0, 0, 0);
+    opacity: 0; 
+    animation: typewriter 6s infinite;
+}
+
+
+@keyframes typewriter {
+    0%, 100% {
+        opacity: 0; 
+    }
+    10%, 30% {
+        opacity: 1; 
+    }
+    40% {
+        opacity: 0;
+}}
+
+
+#para2 span:nth-child(1) {
+    animation-delay: 0s; 
+}
+#para2 span:nth-child(2) {
+    animation-delay: 2s; 
+    
+}
+#para2 span:nth-child(3) {
+    animation-delay: 4s; 
+    
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        left: auto;
+       
+    }
+    #para1
+    {
+        position:fixed;
+    }
+    #para2
+    {
+        position:relative;
+        top: 350px;
+        left:300px;
+    }
+    #para3
+    {
+       width: 200%;
+       top:500px;
+       left:0;
+       
+    }
+
+    .social-links a{
+        top:600px;
+        left:0;
+        font-size:60px;
+       
+    }
+    #video
+    {   
+        left:450px;
+    }
+
+}
+
+
